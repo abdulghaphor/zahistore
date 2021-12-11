@@ -4,12 +4,14 @@ const ButtonContainer = styled.TouchableOpacity`
   margin-vertical: 40px;
   width: 120px;
   height: 40px;
-  padding: 12px;
+  padding: 8px;
   border-radius: 10px;
-  background-color: ${(props) => props.bgColor};
+  background-color: ${({ theme }) => theme.lightPrimaryColor};
+  border: 1px solid ${({ theme }) => theme.primaryColor};
 `;
 const ButtonText = styled.Text`
-  font-size: 16px;
+  font-size: 18px;
+  color: ${({ theme }) => theme.fontColor};
   text-align: center;
 `;
 const StyledButton = ({ onPress, title, bgColor }) => (

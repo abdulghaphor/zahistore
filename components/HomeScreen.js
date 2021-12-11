@@ -1,9 +1,8 @@
 import React from "react";
-import { Button, Text, View } from "react-native";
-import styled from "styled-components/native";
+import { Text, View } from "react-native";
 import StyledButton from "./StyledButton";
 
-const Home = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View>
       <StyledButton
@@ -12,9 +11,16 @@ const Home = ({ navigation }) => {
         accessibilityLabel="Learn more about this purple button"
         bgColor="red"
       />
+      <StyledButton
+        onPress={() => navigation.navigate("SignUp")}
+        title="Sign Up"
+        accessibilityLabel="Learn more about this purple button"
+        bgColor="red"
+      />
+
       <Text>Hello World!</Text>
     </View>
   );
 };
 
-export default Home;
+export default HomeScreen;
